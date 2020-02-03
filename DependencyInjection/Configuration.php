@@ -1,6 +1,6 @@
 <?php
 
-namespace Ikadoc\KCFinderBundle\DependencyInjection;
+namespace Bnbc\KCFinderBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -19,7 +19,7 @@ class Configuration implements ConfigurationInterface
     {
 	    $treeBuilder = $this->createTreeBuilder();
 	    $treeBuilder
-		    ->root('ikadoc_kc_finder')
+		    ->root('bnbc_kc_finder')
             ->children()
 	            ->scalarNode('base_path')
 		            ->isRequired()

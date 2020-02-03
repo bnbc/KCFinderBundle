@@ -1,6 +1,6 @@
 <?php
 
-namespace Ikadoc\KCFinderBundle\Controller;
+namespace Bnbc\KCFinderBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -14,9 +14,9 @@ class ProxyController extends Controller
 		$path = $pathinfo['dirname'];
 		$fileName = $pathinfo['basename'];
 		if ('.' == $path) {
-			$path = $this->getParameter('ikadoc_kc_finder_path');
+			$path = $this->getParameter('bnbc_kc_finder_path');
 		} else {
-			$path = rtrim($this->getParameter('ikadoc_kc_finder_path'),'/') . '/' . $path;
+			$path = rtrim($this->getParameter('bnbc_kc_finder_path'),'/') . '/' . $path;
 		}
 
 		if (in_array($pathinfo['extension'], array('png','gif','jpg'))) {
@@ -24,7 +24,7 @@ class ProxyController extends Controller
 			return $response;
 		}
 
-		$config = $this->getParameter('ikadoc_kc_finder_config');
+		$config = $this->getParameter('bnbc_kc_finder_config');
 		if (is_array($config)) {
 			if (!array_key_exists('KCFINDER',$_SESSION) || is_null($_SESSION['KCFINDER'])) {
 				$_SESSION['KCFINDER'] = array();

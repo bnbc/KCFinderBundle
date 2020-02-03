@@ -23,7 +23,7 @@
         "symfony/twig-bundle": "Allows to use Twig templates"
     },
     "autoload": {
-        "psr-4": { "Ikadoc\\KCFinderBundle\\": "" }
+        "psr-4": { "Bnbc\\KCFinderBundle\\": "" }
     },
     "config": {
         "bin-dir": "bin/"
